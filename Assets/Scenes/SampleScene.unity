@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 33314283}
   - component: {fileID: 33314282}
   - component: {fileID: 33314286}
+  - component: {fileID: 33314287}
   m_Layer: 0
   m_Name: Cloud Video Player
   m_TagString: Untagged
@@ -214,14 +215,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33314281}
-  m_LocalRotation: {x: 0.49999928, y: 0.5000007, z: -0.49999928, w: 0.50000083}
-  m_LocalPosition: {x: -34.4786, y: 4.2679386, z: -5.5283213}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalRotation: {x: 0.66790515, y: 0.23216946, z: -0.66790515, w: 0.23216963}
+  m_LocalPosition: {x: -90.3, y: 24.9, z: -1.2}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 38.336, y: -90, z: -180}
 --- !u!328 &33314286
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -251,12 +252,25 @@ VideoPlayer:
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 01
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 1
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
+--- !u!114 &33314287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33314281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae2b8b6b8e70764fbbf0bcc269e455d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _aspectRatio: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
