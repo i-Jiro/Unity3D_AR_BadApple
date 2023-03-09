@@ -23,10 +23,7 @@ Material:
   m_Name: VideoMat
   m_Shader: {fileID: -6465566751694194690, guid: 3820c234e1b26484eb03144236f1cbdd, type: 3}
   m_ValidKeywords: []
-  m_InvalidKeywords:
-  - _ENVIRONMENTREFLECTIONS_OFF
-  - _SPECULARHIGHLIGHTS_OFF
-  - _SURFACE_TYPE_TRANSPARENT
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -69,6 +66,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainText:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -164,7 +165,7 @@ Material:
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _CloudAlpha: 0.9
-    - _CloudPower: 1
+    - _CloudPower: 1.15
     - _CloudScale: 30
     - _CloudSpeed: 0.025
     - _ColorMode: 0
@@ -178,7 +179,7 @@ Material:
     - _DistortionStrength: 1
     - _DistortionStrengthScaled: 0.1
     - _DstBlend: 10
-    - _EmissionStrength: 2
+    - _EmissionStrength: 3
     - _EnableHeightBlend: 0
     - _EnableInstancedPerPixelNormal: 1
     - _EnvironmentReflections: 0
@@ -190,7 +191,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _HeightTransition: 0
-    - _InnerEdge: 0.25
+    - _InnerEdge: 0.07
     - _MaskScale: 10
     - _MaskSpeed: 0.005
     - _Metallic: 0
@@ -201,7 +202,7 @@ Material:
     - _Mode: 0
     - _NumLayersCount: 1
     - _OcclusionStrength: 1
-    - _OuterEdge: 0.55
+    - _OuterEdge: 0.59
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -219,9 +220,9 @@ Material:
     - _SrcBlend: 5
     - _Surface: 1
     - _VectorOffset: 4
-    - _VertexOffset: 4
-    - _VideoOpacity: 0.253
-    - _Video_Power: 0.25
+    - _VertexOffset: 5
+    - _VideoOpacity: 0.36
+    - _Video_Power: 2
     - _WorkflowMode: 1
     - _ZWrite: 0
     m_Colors:
@@ -230,7 +231,7 @@ Material:
     - _CameraFadeParams: {r: 0, g: 0, b: 0, a: 0}
     - _CloudColor: {r: 11.997171, g: 11.997171, b: 11.997171, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DistortSpeed: {r: 0.015, g: 0.05, b: 0, a: 0}
+    - _DistortSpeed: {r: 0.015, g: 0.01, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
