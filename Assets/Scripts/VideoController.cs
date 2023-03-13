@@ -1,12 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.Events;
 
 public class VideoController : MonoBehaviour
 {
     private VideoPlayer _videoPlayer;
     [SerializeField] private VideoAspectRatio _aspectRatio;
+    [SerializeField] private Camera _mainCamera;
+
+    public UnityEvent VideoStart;
+    public UnityEvent VideoEnd;
+
+    public float Distance = 50f;
+    public float Height = 50f;
+    
     private void Awake()
     {
         _videoPlayer = GetComponent<VideoPlayer>();
@@ -15,8 +25,27 @@ public class VideoController : MonoBehaviour
     
     void Start()
     {
+        AlignPosition();
         _videoPlayer.aspectRatio = _aspectRatio;
+        if (!_videoPlayer)
+        {
+            _videoPlayer.loopPointReached += OnVideoEnd;
+        }
+    }
+
+    public void Play()
+    {
         StartCoroutine(PrepareVideo());
+    }
+
+    //Centers and rotates the video player to face towards the camera.
+    public void AlignPosition()
+    {
+        var direction = _mainCamera.transform.forward;
+        direction.y = 0;
+        
+        transform.position = _mainCamera.transform.position + (direction.normalized * Distance) + (Vector3.up * Height);
+        transform.parent.forward = (_mainCamera.transform.position - transform.position).normalized;
     }
 
     private IEnumerator PrepareVideo()
@@ -26,6 +55,21 @@ public class VideoController : MonoBehaviour
         {
             yield return null;
         }
+        VideoStart?.Invoke();
         _videoPlayer.Play();
+    }
+
+    private void OnVideoEnd(VideoPlayer videoPlayer)
+    {
+        VideoEnd?.Invoke();
+        videoPlayer.Stop();
+    }
+
+    private void OnDestroy()
+    {
+        if (!_videoPlayer)
+        {
+            _videoPlayer.loopPointReached -= OnVideoEnd;
+        }
     }
 }
