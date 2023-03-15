@@ -25,7 +25,7 @@ public class VideoController : MonoBehaviour
     
     void Start()
     {
-        AlignPosition();
+        AlignPositionToCamera();
         _videoPlayer.aspectRatio = _aspectRatio;
         if (!_videoPlayer)
         {
@@ -39,7 +39,7 @@ public class VideoController : MonoBehaviour
     }
 
     //Centers and rotates the video player to face towards the camera.
-    public void AlignPosition()
+    public void AlignPositionToCamera()
     {
         var direction = _mainCamera.transform.forward;
         direction.y = 0;

@@ -748,7 +748,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1476815180}
         m_TargetAssemblyTypeName: VideoController, Assembly-CSharp
-        m_MethodName: AlignPosition
+        m_MethodName: AlignPositionToCamera
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
