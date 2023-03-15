@@ -48,6 +48,17 @@ public class VideoController : MonoBehaviour
         transform.parent.forward = (_mainCamera.transform.position - transform.position).normalized;
     }
 
+    //Called by UI slider to update vertical position.
+    public void UpdateVerticalPosition(float value)
+    {
+        var relative = (Mathf.Clamp(value, 0f, 1f)/1f) * Height;
+        var newPos = transform.position;
+        newPos.y = _mainCamera.transform.position.y;
+        newPos += (Vector3.up * relative);
+
+        transform.position = newPos;
+    }
+
     private IEnumerator PrepareVideo()
     {
         _videoPlayer.Prepare();
