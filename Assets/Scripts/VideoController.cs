@@ -25,6 +25,7 @@ public class VideoController : MonoBehaviour
     
     void Start()
     {
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
         AlignPositionToCamera();
         _videoPlayer.aspectRatio = _aspectRatio;
         if (!_videoPlayer)
@@ -51,7 +52,7 @@ public class VideoController : MonoBehaviour
     //Called by UI slider to update vertical position.
     public void UpdateVerticalPosition(float value)
     {
-        var relative = (Mathf.Clamp(value, 0f, 1f)/1f) * Height;
+        var relative = (Mathf.Clamp(value, 0f, 2f)/1f) * Height;
         var newPos = transform.position;
         newPos.y = _mainCamera.transform.position.y;
         newPos += (Vector3.up * relative);
