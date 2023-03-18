@@ -2,6 +2,8 @@
 ![BadAppleAR](https://user-images.githubusercontent.com/10013436/226129854-d050fc54-8905-4da2-b895-8d04ce8e26e4.gif)
 ![BadAppleInEngine](https://user-images.githubusercontent.com/10013436/226129875-f89e4d82-556d-4bf8-99f2-79d720c581ae.gif)
 
+[Click here to watch live demonstration.](https://www.youtube.com/watch?v=vN05KL3HdtE)
+
 Simple 3D light-weight augmented reality video player that displays monochrome video as clouds in the sky. Uses shaders to sample the black and white areas of the video to simulate volumetric clouds. Project leverages Niantic's ARDK to mask the sky with the video through the use of semantic segmetation.
 Best viewed in broad daylight with clear skies.
 
