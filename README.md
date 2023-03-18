@@ -5,7 +5,7 @@
 Simple 3D light-weight augmented reality video player that displays monochrome video as clouds in the sky. Uses shaders to sample the black and white areas of the video to simulate volumetric clouds. Project leverages Niantic's ARDK to mask the sky with the video through the use of semantic segmetation.
 Best viewed in broad daylight with clear skies.
 
-## How To Install And Use (Android Only)
+## How To Install And Use (Android 7.0+ Only)
 I'm unable to create an iPhone release as I don't personally have access to a Mac and Xcode. You can build it yourself with instructions below and some adjustments on your part.
 
 - Download .APK from release section.
